@@ -1,0 +1,6 @@
+name: dartling_default_app
+description: A sample web application
+dependencies:
+  browser: any
+  dartling:
+    git: git://github.com/dzenanr/dartling.git
