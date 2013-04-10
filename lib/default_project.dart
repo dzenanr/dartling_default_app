@@ -35,16 +35,12 @@ library default_project;
 
 import 'package:dartling/dartling.dart';
 
-part 'default/project/json/data.dart';
-// do not change model
-part 'default/project/json/model.dart';
-
-part 'default/project/init.dart';
-part 'default/project/projects.dart';
-
-part 'gen/default/project/entries.dart';
-part 'gen/default/project/projects.dart';
-// do not change models
-part 'gen/default/models.dart';
-part 'gen/default/repository.dart';
+part 'default_project/default/project/json/data.dart';
+part 'default_project/default/project/json/model.dart';
+part 'default_project/default/project/init.dart';
+part 'default_project/default/project/projects.dart';
+part 'default_project/gen/default/project/entries.dart';
+part 'default_project/gen/default/project/projects.dart';
+part 'default_project/gen/default/models.dart';
+part 'default_project/gen/default/repository.dart';
 
