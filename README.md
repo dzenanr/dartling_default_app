@@ -1,5 +1,4 @@
-# ![Alt dartling] 
-(https://raw.github.com/dzenanr/dartling/master/resources/dartling.png) 
+# ![Alt dartling] (https://raw.github.com/dzenanr/dartling/master/resources/dartling.png) 
 default app
 
 [dartling] (https://github.com/dzenanr/dartling) is a domain model framework. 
