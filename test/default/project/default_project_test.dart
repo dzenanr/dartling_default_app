@@ -118,7 +118,7 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
     test('Find Project by New Oid', () {
       var dartlingOid = new Oid.ts(1345648254063);
       var projects = entries.projects;
-      var project = projects.find(dartlingOid);
+      var project = projects.singleWhereOid(dartlingOid);
       expect(project, isNull);
     });
     test('Find Project by Saved Oid', () {
@@ -129,7 +129,7 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
       expect(projects.isEmpty, isFalse);
 
       var dartlingOid = new Oid.ts(1344888717723);
-      var project = projects.find(dartlingOid);
+      var project = projects.singleWhereOid(dartlingOid);
       expect(project, isNotNull);
       expect(project.name, equals('Dartling'));
     });
@@ -140,14 +140,14 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
       expect(id.length, equals(1));
       var searchName = 'Dartling';
       id.setAttribute('name', searchName);
-      var project = projects.findById(id);
+      var project = projects.singleWhereId(id);
       expect(project, isNotNull);
       expect(project.name, equals(searchName));
     });
     test('Find Project by Attribute Id', () {
       var projects = entries.projects;
       var searchName = 'Dartling';
-      var project = projects.findByAttributeId('name', searchName);
+      var project = projects.singleWhereAttributeId('name', searchName);
       expect(project, isNotNull);
       expect(project.name, equals(searchName));
     });
@@ -160,7 +160,7 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
     });
     test('Select Projects by Function', () {
       var projects = entries.projects;
-      var programmingProjects = projects.select((p) => p.onProgramming);
+      var programmingProjects = projects.selectWhere((p) => p.onProgramming);
       expect(programmingProjects.isEmpty, isFalse);
       expect(programmingProjects.length, equals(2));
 
@@ -168,7 +168,7 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
     });
     test('Select Projects by Function then Add', () {
       var projects = entries.projects;
-      var programmingProjects = projects.select((p) => p.onProgramming);
+      var programmingProjects = projects.selectWhere((p) => p.onProgramming);
       expect(programmingProjects.isEmpty, isFalse);
       expect(programmingProjects.source.isEmpty, isFalse);
 
@@ -188,7 +188,7 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
 
       //projects.display('Projects Before Remove');
 
-      Projects programmingProjects = projects.select((p) => p.onProgramming);
+      Projects programmingProjects = projects.selectWhere((p) => p.onProgramming);
       expect(programmingProjects.isEmpty, isFalse);
       expect(programmingProjects.source.isEmpty, isFalse);
 
@@ -205,15 +205,15 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
       var projects = entries.projects;
       /*
       var orderedProjects =
-          projects.orderByFunction((m,n) => m.nameCompareTo(n));
+          projects.order((m,n) => m.nameCompareTo(n));
       expect(orderedProjects.isEmpty, isFalse);
       expect(orderedProjects.length, equals(projects.length));
       expect(orderedProjects.source.isEmpty, isFalse);
       expect(orderedProjects.source.length, equals(projects.length));
       orderedProjects.display(title:'Order Projects by Name');
       */
-      projects.orderByFunction((m,n) => m.nameCompareTo(n));
 
+      projects.order((m,n) => m.nameCompareTo(n));
       projects.display(title:'Order Projects by Name');
     });
     test('New Project with Id', () {
@@ -236,9 +236,9 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
       expect(copiedProjects.length, equals(projects.length));
       expect(copiedProjects, isNot(same(projects)));
       copiedProjects.forEach((cp) =>
-          expect(cp, equals(projects.find(cp.oid))));
+          expect(cp, equals(projects.singleWhereOid(cp.oid))));
       copiedProjects.forEach((cp) =>
-          expect(cp, isNot(same(projects.findById(cp.id)))));
+          expect(cp, isNot(same(projects.singleWhereId(cp.id)))));
 
       copiedProjects.display(title:'Copied Projects');
     });
@@ -291,7 +291,7 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
       //projects.display('Before Update New Project Id with Success');
 
       var afterUpdateMarketing = marketing.copy();
-      var nameAttribute = marketing.concept.attributes.findByCode('name');
+      var nameAttribute = marketing.concept.attributes.singleWhereCode('name');
       expect(nameAttribute.update, isFalse);
       nameAttribute.update = true;
       var newName = 'Marketing Dartling';
@@ -303,7 +303,7 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
 
       //projects.display('After Update New Project Id with Success');
 
-      var marketingDartling = projects.findByAttributeId('name', newName);
+      var marketingDartling = projects.singleWhereAttributeId('name', newName);
       expect(marketingDartling, isNotNull);
       expect(marketingDartling.name, equals(newName));
     });
@@ -407,7 +407,7 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
     test('Undo and Redo Update Project', () {
       var projects = entries.projects;
       var searchName = 'Dartling';
-      var project = projects.findByAttributeId('name', searchName);
+      var project = projects.singleWhereAttributeId('name', searchName);
       expect(project, isNotNull);
       expect(project.name, equals(searchName));
 

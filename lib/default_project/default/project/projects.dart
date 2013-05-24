@@ -19,7 +19,7 @@ class Projects extends ProjectsGen {
   Projects(Concept concept) : super(concept);
 
   Project findByNameId(String name) {
-    return findById(new Id(concept)..setAttribute('name', name));
+    return singleWhereId(new Id(concept)..setAttribute('name', name));
   }
 
   bool preAdd(Project project) {
