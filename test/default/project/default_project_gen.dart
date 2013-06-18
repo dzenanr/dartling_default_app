@@ -45,7 +45,7 @@ genCode() {
   // change Skeleton to YourModelName
   // change "Skeleton" to "YourModelName"
   Model defaultProjectModel =
-      fromMagicBoxes(defaultProjectModelJson, defaultDomain, "Project");
+      fromJsonToModel(defaultProjectModelJson, defaultDomain, "Project");
 
   repo.domains.add(defaultDomain);
 

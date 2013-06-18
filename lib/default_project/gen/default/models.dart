@@ -9,7 +9,7 @@ class DefaultModels extends DomainModels {
   }
 
   ProjectEntries fromJsonToProjectEntries() {
-    return new ProjectEntries(fromMagicBoxes(
+    return new ProjectEntries(fromJsonToModel(
       defaultProjectModelJson,
       domain,
       DefaultRepo.defaultProjectModelCode));

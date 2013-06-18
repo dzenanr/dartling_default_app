@@ -31,6 +31,8 @@ var defaultProjectModelJson = r'''
                "category":"identifier",
                "name":"name",
                "type":"String",
+               "essential":true,
+               "sensitive":false,
                "init":""
             },
             {
@@ -38,6 +40,8 @@ var defaultProjectModelJson = r'''
                "category":"attribute",
                "name":"description",
                "type":"String",
+               "essential":false,
+               "sensitive":false,
                "init":""
             }
          ]
