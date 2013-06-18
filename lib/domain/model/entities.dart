@@ -44,7 +44,11 @@ class EntitiesSimpleTable {
         for (Attribute attribute in attributes) {
           value = entity.getAttribute(attribute.code);
           section = '${section}    <td> \n';
-          section = '${section}      ${value} \n';
+          if (attribute.sensitive) {
+            section = '${section}      ******** \n';
+          } else {
+            section = '${section}      ${value} \n';
+          }
           section = '${section}    </td> \n';
         }
         section = '${section}  </tr> \n';
@@ -148,7 +152,11 @@ class EntitiesTable {
         for (Attribute attribute in attributes) {
           value = entity.getAttribute(attribute.code);
           section = '${section}    <td> \n';
-          section = '${section}      ${value} \n';
+          if (attribute.sensitive) {
+            section = '${section}      ******** \n';
+          } else {
+            section = '${section}      ${value} \n';
+          }
           section = '${section}    </td> \n';
         }
 

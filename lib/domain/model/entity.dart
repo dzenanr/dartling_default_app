@@ -39,7 +39,11 @@ class EntityTable {
         section = '${section}      ${label} \n';
         section = '${section}    </th> \n';
         section = '${section}    <td> \n';
-        section = '${section}      ${value} \n';
+        if (attribute.sensitive) {
+          section = '${section}      ******** \n';
+        } else {
+          section = '${section}      ${value} \n';
+        }
         section = '${section}    </td> \n';
         section = '${section}  </tr> \n';
       }
