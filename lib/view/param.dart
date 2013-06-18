@@ -9,7 +9,7 @@ class View {
   Document document;
   String did;
   String title;
-  bool essentialOnly = false;
+  bool essentialOnly = true;
 
   View(this.document, this.did);
 
