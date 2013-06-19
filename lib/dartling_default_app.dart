@@ -37,7 +37,8 @@ import 'dart:isolate';
 import 'dart:math';
 
 import 'package:dartling/dartling.dart';
-import 'package:intl/date_symbol_data_local.dart';
+// http://stackoverflow.com/questions/16126579/how-do-i-format-a-date-with-dart
+import 'package:intl/intl.dart';
 
 part 'repo.dart';
 part 'view/param.dart';

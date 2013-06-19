@@ -46,8 +46,14 @@ class EntitiesSimpleTable {
           section = '${section}    <td> \n';
           if (attribute.sensitive) {
             section = '${section}      ******** \n';
+          } else if (attribute.type.code == 'DateTime') {
+            var formatter = new DateFormat('yyyy-MM-dd');
+            String formattedValue = formatter.format(value);
+            section = '${section}      ${formattedValue} \n';
           } else if (attribute.type.code == 'Uri') {
             section = '${section}      <a href="${value}">${attribute.code}</a> \n';
+          } else if (attribute.type.code == 'Email') {
+            section = '${section}      <a href="mailto:${value}">${attribute.code}</a> \n';
           } else {
             section = '${section}      ${value} \n';
           }
@@ -156,8 +162,14 @@ class EntitiesTable {
           section = '${section}    <td> \n';
           if (attribute.sensitive) {
             section = '${section}      ******** \n';
+          } else if (attribute.type.code == 'DateTime') {
+            var formatter = new DateFormat('yyyy-MM-dd');
+            String formattedValue = formatter.format(value);
+            section = '${section}      ${formattedValue} \n';
           } else if (attribute.type.code == 'Uri') {
             section = '${section}      <a href="${value}">${attribute.code}</a> \n';
+          } else if (attribute.type.code == 'Email') {
+            section = '${section}      <a href="mailto:${value}">${attribute.code}</a> \n';
           } else {
             section = '${section}      ${value} \n';
           }

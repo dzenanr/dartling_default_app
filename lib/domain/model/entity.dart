@@ -42,8 +42,9 @@ class EntityTable {
         if (attribute.sensitive) {
           section = '${section}      ******** \n';
         } else if (attribute.type.code == 'DateTime') {
-          value = new DateFormat.yMd().format(value);
-          section = '${section}      ${value} \n';
+          var formatter = new DateFormat('yyyy-MM-dd');
+          String formattedValue = formatter.format(value);
+          section = '${section}      ${formattedValue} \n';
         } else if (attribute.type.code == 'Uri') {
           section = '${section}      <a href="${value}">${attribute.code}</a> \n';
         } else if (attribute.type.code == 'Email') {
