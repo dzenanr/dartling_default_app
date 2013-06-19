@@ -37,6 +37,7 @@ import 'dart:isolate';
 import 'dart:math';
 
 import 'package:dartling/dartling.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 part 'repo.dart';
 part 'view/param.dart';

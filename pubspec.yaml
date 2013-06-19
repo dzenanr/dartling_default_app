@@ -7,3 +7,4 @@ dependencies:
   browser: any
   dartling:
     git: git://github.com/dzenanr/dartling.git
+  intl: any
