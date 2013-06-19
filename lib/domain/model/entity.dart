@@ -46,7 +46,7 @@ class EntityTable {
             section = '${section}      ${value} \n';
           } else {
             var webLink = Uri.parse('${value}');
-            section = '${section}      ${webLink.toString()} \n';
+            section = '${section}      <a href="${webLink.toString()}">"${attribute.code}"</a> \n';
           }
         }
         section = '${section}    </td> \n';

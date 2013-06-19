@@ -47,7 +47,12 @@ class EntitiesSimpleTable {
           if (attribute.sensitive) {
             section = '${section}      ******** \n';
           } else {
-            section = '${section}      ${value} \n';
+            if (attribute.type.code == 'Uri') {
+              section = '${section}      ${value} \n';
+            } else {
+              var webLink = Uri.parse('${value}');
+              section = '${section}      <a href="${webLink.toString()}">"${attribute.code}"</a> \n';
+            }
           }
           section = '${section}    </td> \n';
         }
@@ -155,7 +160,12 @@ class EntitiesTable {
           if (attribute.sensitive) {
             section = '${section}      ******** \n';
           } else {
-            section = '${section}      ${value} \n';
+            if (attribute.type.code == 'Uri') {
+              section = '${section}      ${value} \n';
+            } else {
+              var webLink = Uri.parse('${value}');
+              section = '${section}      <a href="${webLink.toString()}">"${attribute.code}"</a> \n';
+            }
           }
           section = '${section}    </td> \n';
         }
