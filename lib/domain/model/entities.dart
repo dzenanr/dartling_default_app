@@ -47,7 +47,7 @@ class EntitiesSimpleTable {
           if (attribute.sensitive) {
             section = '${section}      ******** \n';
           } else if (attribute.type.code == 'Uri') {
-            section = '${section}      <a href="${value}">"${attribute.code}"</a> \n';
+            section = '${section}      <a href="${value}">${attribute.code}</a> \n';
           } else {
             section = '${section}      ${value} \n';
           }
@@ -157,7 +157,7 @@ class EntitiesTable {
           if (attribute.sensitive) {
             section = '${section}      ******** \n';
           } else if (attribute.type.code == 'Uri') {
-            section = '${section}      <a href="${value}">"${attribute.code}"</a> \n';
+            section = '${section}      <a href="${value}">${attribute.code}</a> \n';
           } else {
             section = '${section}      ${value} \n';
           }
