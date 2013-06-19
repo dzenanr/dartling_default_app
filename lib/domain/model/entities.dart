@@ -46,13 +46,10 @@ class EntitiesSimpleTable {
           section = '${section}    <td> \n';
           if (attribute.sensitive) {
             section = '${section}      ******** \n';
+          } else if (attribute.type.code == 'Uri') {
+            section = '${section}      <a href="${value}">"${attribute.code}"</a> \n';
           } else {
-            if (attribute.type.code == 'Uri') {
-              section = '${section}      ${value} \n';
-            } else {
-              var webLink = Uri.parse('${value}');
-              section = '${section}      <a href="${webLink.toString()}">"${attribute.code}"</a> \n';
-            }
+            section = '${section}      ${value} \n';
           }
           section = '${section}    </td> \n';
         }
@@ -159,13 +156,10 @@ class EntitiesTable {
           section = '${section}    <td> \n';
           if (attribute.sensitive) {
             section = '${section}      ******** \n';
+          } else if (attribute.type.code == 'Uri') {
+            section = '${section}      <a href="${value}">"${attribute.code}"</a> \n';
           } else {
-            if (attribute.type.code == 'Uri') {
-              section = '${section}      ${value} \n';
-            } else {
-              var webLink = Uri.parse('${value}');
-              section = '${section}      <a href="${webLink.toString()}">"${attribute.code}"</a> \n';
-            }
+            section = '${section}      ${value} \n';
           }
           section = '${section}    </td> \n';
         }
