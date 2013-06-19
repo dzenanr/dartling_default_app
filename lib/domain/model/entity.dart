@@ -42,7 +42,12 @@ class EntityTable {
         if (attribute.sensitive) {
           section = '${section}      ******** \n';
         } else {
-          section = '${section}      ${value} \n';
+          if (attribute.type.code == 'Uri') {
+            section = '${section}      ${value} \n';
+          } else {
+            var webLink = Uri.parse('${value}');
+            section = '${section}      ${webLink.toString()} \n';
+          }
         }
         section = '${section}    </td> \n';
         section = '${section}  </tr> \n';
