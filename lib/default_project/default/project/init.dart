@@ -7,7 +7,7 @@ initDefaultProject(var entries) {
 }
 
 _initProjects(var entries) {
-  Project project1 = new Project.withId(entries.projects.concept, 'Dartling');
+  Project project1 = new Project.withId(entries.projects.concept, 'dartling');
   project1.description = 'A domain model framework.';
   entries.projects.add(project1);
 
