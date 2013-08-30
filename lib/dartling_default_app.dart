@@ -33,8 +33,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 library dartling_default_app;
 
 import 'dart:html';
-import 'dart:isolate';
-import 'dart:math';
 
 import 'package:dartling/dartling.dart';
 // http://stackoverflow.com/questions/16126579/how-do-i-format-a-date-with-dart
