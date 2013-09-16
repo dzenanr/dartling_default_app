@@ -56,7 +56,13 @@ class RepoMenuBar {
 
     section = '${section}  </ul> \n';
     section = '${section}</nav> \n';
-    view.document.query('#${view.did}').innerHtml = section;
+    //view.document.query('#${view.did}').innerHtml = section;
+    view.document.query('#${view.did}').setInnerHtml(
+        section,
+        validator: new NodeValidatorBuilder()
+        ..allowHtml5()
+          ..allowElement('a', attributes: ['href'])
+    );
 
     for (Domain domain in domains) {
       DomainModels domainModels = repo.getDomainModels(domain.code);
