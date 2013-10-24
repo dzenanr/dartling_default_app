@@ -71,14 +71,14 @@ class EntitiesSimpleTable {
        * provides functionality global to the document (such as obtaining the
        * page's URL and creating new elements in the document).
        */
-      view.document.query('#${view.did}').innerHtml = section;
+      view.document.querySelector('#${view.did}').innerHtml = section;
       hidden = false;
     }
   }
 
   void hide() {
     if (shown) {
-      view.document.query('#${view.did}').innerHtml = '';
+      view.document.querySelector('#${view.did}').innerHtml = '';
       hidden = true;
     }
   }
@@ -211,11 +211,11 @@ class EntitiesTable {
        * provides functionality global to the document (such as obtaining the
        * page's URL and creating new elements in the document).
        */
-      view.document.query('#${view.did}').innerHtml = section;
+      view.document.querySelector('#${view.did}').innerHtml = section;
 
       for (var entity in view.entities) {
         if (entity.concept.attributes.length > 0) {
-          Element entityTdElement = view.document.query(
+          Element entityTdElement = view.document.querySelector(
               '#${entity.concept.codeFirstLetterLower}${entity.oid}');
           ButtonElement entityButton = new ButtonElement();
           entityButton.text = 'Show';
@@ -247,7 +247,7 @@ class EntitiesTable {
 
         for (Child child in children) {
           Element childTdElement =
-              view.document.query('#${child.code}Of${entity.oid}');
+              view.document.querySelector('#${child.code}Of${entity.oid}');
           ButtonElement childButton = new ButtonElement();
           childButton.text = 'Show';
           var cssClasses = new List<String>();
@@ -286,14 +286,14 @@ class EntitiesTable {
           }
         }
       }
-      print(view.document.query('#${view.did}').innerHtml);
+      print(view.document.querySelector('#${view.did}').innerHtml);
       hidden = false;
     }
   }
 
   void hide() {
     if (shown) {
-      view.document.query('#${view.did}').innerHtml = '';
+      view.document.querySelector('#${view.did}').innerHtml = '';
       hidden = true;
     }
   }
