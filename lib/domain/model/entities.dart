@@ -71,7 +71,12 @@ class EntitiesSimpleTable {
        * provides functionality global to the document (such as obtaining the
        * page's URL and creating new elements in the document).
        */
-      view.document.querySelector('#${view.did}').innerHtml = section;
+      view.document.querySelector('#${view.did}').setInnerHtml(
+          section,
+          validator: new NodeValidatorBuilder()
+            ..allowHtml5()
+            ..allowElement('a', attributes: ['href'])
+      );
       hidden = false;
     }
   }
@@ -211,7 +216,12 @@ class EntitiesTable {
        * provides functionality global to the document (such as obtaining the
        * page's URL and creating new elements in the document).
        */
-      view.document.querySelector('#${view.did}').innerHtml = section;
+      view.document.querySelector('#${view.did}').setInnerHtml(
+          section,
+          validator: new NodeValidatorBuilder()
+            ..allowHtml5()
+            ..allowElement('a', attributes: ['href'])
+      );
 
       for (var entity in view.entities) {
         if (entity.concept.attributes.length > 0) {
