@@ -48,6 +48,8 @@ class EntitiesSimpleTable {
             section = '${section}      ******** \n';
           } else if (attribute.type.code == 'DateTime') {
             if (value != null) {
+              // http://api.dartlang.org/docs/releases/latest/intl/DateFormat.html
+              // var formatter = new DateFormat('yyyy-MM-dd');
               var formatter = new DateFormat.yMd();
               String formattedValue = formatter.format(value);
               section = '${section}      ${formattedValue} \n';
@@ -173,6 +175,8 @@ class EntitiesTable {
             section = '${section}      ******** \n';
           } else if (attribute.type.code == 'DateTime') {
             if (value != null) {
+              // http://api.dartlang.org/docs/releases/latest/intl/DateFormat.html
+              // var formatter = new DateFormat('yyyy-MM-dd');
               var formatter = new DateFormat.yMd();
               String formattedValue = formatter.format(value);
               section = '${section}      ${formattedValue} \n';
