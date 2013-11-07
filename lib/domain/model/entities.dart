@@ -48,7 +48,7 @@ class EntitiesSimpleTable {
             section = '${section}      ******** \n';
           } else if (attribute.type.code == 'DateTime') {
             if (value != null) {
-              var formatter = new DateFormat('yyyy-MM-dd');
+              var formatter = new DateFormat.yMd();
               String formattedValue = formatter.format(value);
               section = '${section}      ${formattedValue} \n';
             } else {
@@ -173,7 +173,7 @@ class EntitiesTable {
             section = '${section}      ******** \n';
           } else if (attribute.type.code == 'DateTime') {
             if (value != null) {
-              var formatter = new DateFormat('yyyy-MM-dd');
+              var formatter = new DateFormat.yMd();
               String formattedValue = formatter.format(value);
               section = '${section}      ${formattedValue} \n';
             } else {
