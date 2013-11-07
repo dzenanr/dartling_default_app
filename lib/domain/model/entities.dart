@@ -54,7 +54,7 @@ class EntitiesSimpleTable {
               String formattedValue = formatter.format(value);
               section = '${section}      ${formattedValue} \n';
             } else {
-              section = '${section}      ${value} \n';
+              section = '${section}       \n';
             }
           } else if (attribute.type.code == 'Uri') {
             section = '${section}      <a href="${value}">${attribute.code}</a> \n';
@@ -181,7 +181,7 @@ class EntitiesTable {
               String formattedValue = formatter.format(value);
               section = '${section}      ${formattedValue} \n';
             } else {
-              section = '${section}      ${value} \n';
+              section = '${section}       \n';
             }
           } else if (attribute.type.code == 'Uri') {
             section = '${section}      <a href="${value}">${attribute.code}</a> \n';
