@@ -1,4 +1,4 @@
-github.txt for dartling_default_app 
+github.txt for dartling_default_app
 
 GitHub, Git
 
@@ -30,18 +30,18 @@ http://help.github.com/create-a-repo/
 
 Create a New Repository at GitHub (without README, since cloning will not be used)
 Repository Name: dartling_default_app
-Description: 
+Description:
   dartling default app is used to interpret a dartling model and provide a web
   app to navigate through the model starting by entry points.
-      
+
 Next steps:
-  cd git/dart/dartling_default_app
+  cd git/dart/model/dartling_default_app
   git init
   git status
   git add .
   git commit -m 'initial version'
   git remote add origin https://github.com/dzenanr/dartling_default_app.git
-  git push -u origin master     
+  git push -u origin master
 
 ----------------------------------------------------------------------
 
@@ -49,7 +49,7 @@ Git with Git Bash
 
 Clone a remote repository into a local repository.
 
-cd git/dart
+cd git/dart/model
 git clone https://github.com/dzenanr/dartling_default_app.git
 cd dartling_default_app
 
@@ -69,7 +69,7 @@ git pull origin master
 
 Work with a local repository
 
-cd git/dart/dartling_default_app
+cd git/dart/model/dartling_default_app
 
 git add .
 
@@ -126,7 +126,7 @@ Switching from spiral to master
 
 to exclude js:
 git checkout dartling_default_app.dart.js
-or 
+or
 (see http://scottr.org/presentations/git-in-5-minutes/)
 git stash
 
