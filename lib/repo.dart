@@ -57,7 +57,7 @@ class RepoMenuBar {
     section = '${section}  </ul> \n';
     section = '${section}</nav> \n';
     //view.document.query('#${view.did}').innerHtml = section;
-    view.document.query('#${view.did}').setInnerHtml(
+    view.document.querySelector('#${view.did}').setInnerHtml(
         section,
         validator: new NodeValidatorBuilder()
         ..allowHtml5()
@@ -71,7 +71,7 @@ class RepoMenuBar {
         for (Concept concept in model.entryConcepts) {
           Entities entryEntities = modelEntries.getEntry(concept.code);
           ButtonElement buttonElement =
-              document.query('#${domain.code}${model.code}${concept.code}Button');
+              document.querySelector('#${domain.code}${model.code}${concept.code}Button');
           View entryEntitiesView = new View.from(view, concept.codesFirstLetterLower);
           entryEntitiesView.entities = entryEntities;
           entryEntitiesView.title = concept.codes;
@@ -121,7 +121,7 @@ class RepoEntitiesSection {
         }
       }
     }
-    view.document.query('#${view.did}').innerHtml = section;
+    view.document.querySelector('#${view.did}').innerHtml = section;
   }
 
 }

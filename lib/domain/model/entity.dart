@@ -42,9 +42,13 @@ class EntityTable {
         if (attribute.sensitive) {
           section = '${section}      ******** \n';
         } else if (attribute.type.code == 'DateTime') {
-          var formatter = new DateFormat('yyyy-MM-dd');
-          String formattedValue = formatter.format(value);
-          section = '${section}      ${formattedValue} \n';
+          if (value != null) {
+            var formatter = new DateFormat('yyyy-MM-dd');
+            String formattedValue = formatter.format(value);
+            section = '${section}      ${formattedValue} \n';
+          } else {
+            section = '${section}      ${value} \n';
+          }
         } else if (attribute.type.code == 'Uri') {
           section = '${section}      <a href="${value}">${attribute.code}</a> \n';
         } else if (attribute.type.code == 'Email') {
