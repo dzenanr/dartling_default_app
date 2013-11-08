@@ -138,10 +138,12 @@ class EntitiesTable {
       }
 
       if (view.essentialOnly) {
-        label = 'Display';
-        section = '${section}    <th> \n';
-        section = '${section}      ${label} \n';
-        section = '${section}    </th> \n';
+        if (view.entities.concept.attributes.length > 0) {
+          label = 'Display';
+          section = '${section}    <th> \n';
+          section = '${section}      ${label} \n';
+          section = '${section}    </th> \n';
+        }
       } else {
         if (attributes.length > 0) {
           label = 'Display';
