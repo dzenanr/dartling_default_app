@@ -22,7 +22,11 @@ its context project.
 dartling default app is used to interpret a dartling model and navigate
 through the model, starting by entry points.
 
+## More Details
 
+[**dartling: Domain Model Framework**](https://docs.google.com/document/d/1xzjqxbJdYxn6Qpx_kIhCqCCjk5yabbXiOng8sixMjdc/edit?usp=sharing)
+
+[*Learning Dart*](http://www.packtpub.com/learning-dart/book) by Dzenan Ridjanovic & Ivo Balbaert
 
 
 
