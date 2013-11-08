@@ -1,5 +1,5 @@
 name: dartling_default_app
-version: 1.0.1
+version: 1.0.2
 author: Dzenan Ridjanovic <dzenanr@gmail.com>
 description: dartling default app is used to interpret a dartling model and provide a web app to navigate through the model starting by its entry points
 homepage: http://ondart.me/
