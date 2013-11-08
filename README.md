@@ -28,5 +28,6 @@ through the model, starting by entry points.
 
 [*Learning Dart*](http://www.packtpub.com/learning-dart/book) by Dzenan Ridjanovic & Ivo Balbaert
 
+[*Version History*](LOG.md)
 
 
