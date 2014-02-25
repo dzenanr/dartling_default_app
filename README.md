@@ -1,6 +1,6 @@
 # ![Alt dartling](https://raw.github.com/dzenanr/dartling/master/resources/dartling.png) **default app**
 
-[dartling](https://github.com/dzenanr/dartling) is a domain model framework.
+[dartling](http://pub.dartlang.org/packages/dartling) is a domain model framework.
 Its open source license is the 3-clause BSD license --
 ["New BSD License" or "Modified BSD License"](http://en.wikipedia.org/wiki/BSD_license).
 
@@ -13,7 +13,7 @@ relationships between the same but different concepts, the relationships are
 twins.
 
 A graphical model designed in
-[Model Concepts](https://github.com/dzenanr/magic_boxes) is transformed into
+[Model Concepts](https://github.com/dzenanr/model_concepts) is transformed into
 [json](http://www.json.org/) representation that is imported to
 [dartling_gen](https://github.com/dzenanr/dartling_gen).
 In dartling_gen, the json document is used to generate code for the model and
