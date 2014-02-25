@@ -44,10 +44,10 @@ class RepoMenuBar {
     section = '${section}    <li>About \n';
     section = '${section}      <ul> \n';
     section = '${section}        <li> \n';
-    section = '${section}          <a href="https://github.com/dzenanr/dartling"> \n';
+    section = '${section}          <a href="https://pub.dartlang.org/packages/dartling"> \n';
     section = '${section}            dartling \n';
     section = '${section}          </a> in \n';
-    section = '${section}          <a href="http://www.dartlang.org/"> \n';
+    section = '${section}          <a href="https://www.dartlang.org/"> \n';
     section = '${section}            Dart \n';
     section = '${section}          </a> \n';
     section = '${section}        </li> \n';

@@ -26,7 +26,7 @@ through the model, starting by entry points.
 
 [**dartling: Domain Model Framework**](https://docs.google.com/document/d/1xzjqxbJdYxn6Qpx_kIhCqCCjk5yabbXiOng8sixMjdc/edit?usp=sharing)
 
-[*Learning Dart*](http://www.packtpub.com/learning-dart/book) by Dzenan Ridjanovic & Ivo Balbaert
+[*Learning Dart*](http://learningdart.org/)
 
 [*On Dart*](http://ondart.me/)
 
