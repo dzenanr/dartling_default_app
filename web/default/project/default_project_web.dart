@@ -45,7 +45,6 @@ initDefaultData(DefaultRepo defaultRepo) {
        defaultModels.getModelEntries(DefaultRepo.defaultProjectModelCode);
    initDefaultProject(defaultProjectEntries);
    defaultProjectEntries.display();
-   defaultProjectEntries.displayJson();
 }
 
 showDefaultData(DefaultRepo defaultRepo) {

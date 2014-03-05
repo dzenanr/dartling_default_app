@@ -1,3 +1,5 @@
+
+
 name: dartling_default_app
 version: 1.0.5
 author: Dzenan Ridjanovic <dzenanr@gmail.com>
@@ -9,5 +11,12 @@ documentation: http://goo.gl/Fd08zZ
 dependencies:
   browser: '>=0.9.0 <0.10.0'
   dartling:
+    path: C:\Users\ridjanod.FSA-RIDJANOD-2\dart\model\dartling
+  intl: '>=0.9.0 <0.10.0'
+  
+dependencies:
+  browser: '>=0.9.0 <0.10.0'
+  dartling:
     git: 'https://github.com/dzenanr/dartling.git'
   intl: '>=0.9.0 <0.10.0'
+  

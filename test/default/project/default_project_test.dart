@@ -55,11 +55,11 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
       expect(entries.isEmpty, isTrue);
     });
     test('From Project Model to JSON', () {
-      var json = entries.toJson();
+      var json = entries.toJson('Project');
       expect(json, isNotNull);
 
       print(json);
-      entries.displayJson();
+      entries.displayJson('Project');
     });
     test('From JSON to Project Model', () {
       var projects = entries.projects;
@@ -128,7 +128,7 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
       entries.fromJsonToData();
       expect(projects.isEmpty, isFalse);
 
-      var dartlingOid = new Oid.ts(1344888717723);
+      var dartlingOid = new Oid.ts(1393982021220);
       var project = projects.singleWhereOid(dartlingOid);
       expect(project, isNotNull);
       expect(project.name, equals('dartling'));

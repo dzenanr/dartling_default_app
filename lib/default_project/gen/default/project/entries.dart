@@ -22,6 +22,7 @@ class ProjectEntries extends ModelEntries {
     if (concept.code == "Project") {
       return new Projects(concept);
     }
+    return null;
   }
 
   ConceptEntity newEntity(String conceptCode) {
@@ -32,6 +33,7 @@ class ProjectEntries extends ModelEntries {
     if (concept.code == "Project") {
       return new Project(concept);
     }
+    return null;
   }
 
   fromJsonToData() {

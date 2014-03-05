@@ -7,31 +7,21 @@ part of default_project;
 var defaultProjectDataJson = r'''
 {
    "domain":"Default",
-   "entries":[
+   "model":"Project",
+   "entry":"Project",
+   "entities":[
       {
-         "concept":"Project",
-         "entities":[
-            {
-               "description":"Creating a model of dartling concepts based on MagicBoxes.",
-               "oid":"1344888717721",
-               "name":"dartling Design",
-               "code":null
-            },
-            {
-               "description":"Programming the meta model and the generic model.",
-               "oid":"1344888717722",
-               "name":"dartling Prototype",
-               "code":null
-            },
-            {
-               "description":"Programming dartling.",
-               "oid":"1344888717723",
-               "name":"dartling",
-               "code":null
-            }
-         ]
+         "oid":"1393982021220",
+         "code":null,
+         "name":"dartling",
+         "description":"A domain model framework."
+      },
+      {
+         "oid":"1393982021223",
+         "code":null,
+         "name":"Wicket",
+         "description":"A web component framework."
       }
-   ],
-   "model":"Project"
+   ]
 }
 ''';

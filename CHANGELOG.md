@@ -2,6 +2,10 @@
 
 based on [Semantic Versioning](http://semver.org/)
 
+*1.0.5* 2014-03-04
+
++ remove displayJson() from default_project_web.dart
+
 *1.0.4* 2014-02-25
 
 + update README.md
