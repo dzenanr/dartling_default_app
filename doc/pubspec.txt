@@ -18,5 +18,6 @@ dependencies:
   browser: '>=0.9.0 <0.10.0'
   dartling:
     git: 'https://github.com/dzenanr/dartling.git'
+    version: '>=2.0.0 <3.0.0'
   intl: '>=0.9.0 <0.10.0'
   
