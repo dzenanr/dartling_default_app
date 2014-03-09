@@ -271,7 +271,7 @@ class EntitiesTable {
 
           Concept sourceConcept = child.sourceConcept;
           String entryConceptSourceConceptInternalPath =
-              sourceConcept.entryConceptThisConceptInternalPath;
+              sourceConcept.fromEntryConceptToThisConceptInternalPath;
           Concept destinationConcept = child.destinationConcept;
           String childCodePath =
               '${entryConceptSourceConceptInternalPath}_${child.code}_'
