@@ -238,7 +238,7 @@ class EntitiesTable {
           cssClasses.add('button');
           entityButton.classes = cssClasses;
           String entryConceptThisConceptInternalPath =
-              entity.concept.fromEntryConceptToThisConceptInternalPath;
+              entity.concept.entryConceptThisConceptInternalPath;
           View entityView =
               new View.from(view, entryConceptThisConceptInternalPath);
           entityView.entity = entity;
@@ -271,7 +271,7 @@ class EntitiesTable {
 
           Concept sourceConcept = child.sourceConcept;
           String entryConceptSourceConceptInternalPath =
-              sourceConcept.fromEntryConceptToThisConceptInternalPath;
+              sourceConcept.entryConceptThisConceptInternalPath;
           Concept destinationConcept = child.destinationConcept;
           String childCodePath =
               '${entryConceptSourceConceptInternalPath}_${child.code}_'

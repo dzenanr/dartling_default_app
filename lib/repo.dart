@@ -114,7 +114,7 @@ class RepoEntitiesSection {
         }
         for (Concept concept in model.concepts) {
           String entryConceptThisConceptInternalPath =
-              concept.fromEntryConceptToThisConceptInternalPath;
+              concept.entryConceptThisConceptInternalPath;
           section =
               '${section}<section id="${entryConceptThisConceptInternalPath}">'
               '</section>  \n';
