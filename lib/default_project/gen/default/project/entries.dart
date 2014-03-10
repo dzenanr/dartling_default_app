@@ -37,7 +37,7 @@ class ProjectEntries extends ModelEntries {
   }
 
   fromJsonToData() {
-    fromJson(defaultProjectDataJson);
+    fromJsonToEntry(defaultProjectDataJson);
   }
 
   Projects get projects => getEntry("Project");

@@ -55,11 +55,11 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
       expect(entries.isEmpty, isTrue);
     });
     test('From Project Model to JSON', () {
-      var json = entries.toJson('Project');
+      var json = entries.fromEntryToJson('Project');
       expect(json, isNotNull);
 
       print(json);
-      entries.displayJson('Project');
+      entries.displayEntryJson('Project');
     });
     test('From JSON to Project Model', () {
       var projects = entries.projects;

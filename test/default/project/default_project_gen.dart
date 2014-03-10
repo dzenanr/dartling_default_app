@@ -60,7 +60,7 @@ initDefaultData(DefaultRepo defaultRepo) {
        defaultModels.getModelEntries(DefaultRepo.defaultProjectModelCode);
    initDefaultProject(defaultProjectEntries);
    defaultProjectEntries.display();
-   defaultProjectEntries.displayJson('Project');
+   defaultProjectEntries.displayEntryJson('Project');
 }
 
 void main() {
