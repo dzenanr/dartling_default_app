@@ -2,8 +2,9 @@
 
 based on [Semantic Versioning](http://semver.org/)
 
-*1.0.5* 2014-03-09
+*1.0.5* 2014-03-10
 
++ update default project to dartling 2.0.0
 + update to dartling 2.0.0
 + remove displayJson() from default_project_web.dart
 
