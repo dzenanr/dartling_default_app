@@ -17,6 +17,7 @@ abstract class ProjectGen extends ConceptEntity<Project> {
   set description(String a) => setAttribute("description", a);
 
   Project newEntity() => new Project(concept);
+  Projects newEntities() => new Projects(concept);
 
   int nameCompareTo(Project other) {
     return name.compareTo(other.name);
@@ -27,7 +28,8 @@ abstract class ProjectGen extends ConceptEntity<Project> {
 abstract class ProjectsGen extends Entities<Project> {
 
   ProjectsGen(Concept concept) : super.of(concept);
-
+  
   Projects newEntities() => new Projects(concept);
+  Project newEntity() => new Project(concept);
 
 }

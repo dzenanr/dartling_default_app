@@ -509,7 +509,7 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
       var action1 = new AddAction(session, projects, project1);
 
       var project2 = new Project(projectConcept);
-      //project2.name = 'Database design';
+      project2.name = project1.name;
       var action2 = new AddAction(session, projects, project2);
 
       var transaction = new Transaction(

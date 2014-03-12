@@ -197,7 +197,7 @@ class EntitiesTable {
           section = '${section}    <td> \n';
           var parentEntity = entity.getParent(parent.code);
           if (parentEntity != null) {
-            if (parentEntity.concept.identifier) {
+            if (parentEntity.concept.hasId) {
               section = '${section}      ${parentEntity.id} \n';
             } else {
               section = '${section}      ${parentEntity.oid} \n';
@@ -279,7 +279,7 @@ class EntitiesTable {
           View childView = new View.from(view, childCodePath);
           childView.entities = entity.getChild(child.code);
           if (!childView.entities.isEmpty) {
-            if (entity.concept.identifier) {
+            if (entity.concept.hasId) {
               childView.title = '${entity.id}.${child.code}';
             } else {
               childView.title = '${entity}.${child.code}';
