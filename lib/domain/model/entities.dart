@@ -301,7 +301,7 @@ class EntitiesTable {
           }
         }
       }
-      print(view.document.querySelector('#${view.did}').innerHtml);
+      //print(view.document.querySelector('#${view.did}').innerHtml);
       hidden = false;
     }
   }

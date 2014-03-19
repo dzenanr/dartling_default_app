@@ -2,8 +2,9 @@
 
 based on [Semantic Versioning](http://semver.org/)
 
-*1.0.5* 2014-03-12
+*1.0.5* 2014-03-19
 
++ comment print in entities
 + update concept.identifier to concept.hasId
 + update default project to dartling 2.0.0
 + update to dartling 2.0.0

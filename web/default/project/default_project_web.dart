@@ -44,7 +44,7 @@ initDefaultData(DefaultRepo defaultRepo) {
    var defaultProjectEntries =
        defaultModels.getModelEntries(DefaultRepo.defaultProjectModelCode);
    initDefaultProject(defaultProjectEntries);
-   defaultProjectEntries.display();
+   //defaultProjectEntries.display();
 }
 
 showDefaultData(DefaultRepo defaultRepo) {
