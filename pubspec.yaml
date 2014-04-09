@@ -3,13 +3,9 @@ version: 1.0.5
 author: Dzenan Ridjanovic <dzenanr@gmail.com>
 description: dartling default app is used to interpret a dartling model and provide a web app to navigate through the model starting by its entry points
 homepage: https://github.com/dzenanr/dartling_default_app
-environment:
-  sdk: '>=0.8.10+8 <2.0.0'
 documentation: http://goo.gl/Fd08zZ
 dependencies:
-  browser: '>0.10.0 <0.11.0'
+  browser: '>=0.10.0 <0.11.0'
   dartling:
-    git: 'https://github.com/dzenanr/dartling.git'
-    version: '>=2.0.0 <3.0.0'
-  intl: '>=0.9.0 <0.10.0'
-  
+    git: https://github.com/dzenanr/dartling.git
+  intl: any
