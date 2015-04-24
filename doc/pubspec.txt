@@ -18,6 +18,11 @@ dependencies:
   browser: '>=0.10.0 <0.11.0'
   dartling: '>=2.0.0 <3.0.0'
   intl: '>=0.9.8 <0.10.0'
+  
+dependencies:
+  browser: any
+  dartling: any
+  intl: any
 
 dependencies:
   browser: '>=0.10.0 <0.11.0'
