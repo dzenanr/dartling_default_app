@@ -1,6 +1,6 @@
 
 import 'package:dartling/dartling.dart';
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 
 import 'package:dartling_default_app/default_project.dart';
 
