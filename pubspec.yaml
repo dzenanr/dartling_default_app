@@ -7,5 +7,5 @@ documentation: http://goo.gl/Fd08zZ
 dependencies:
   browser: any
   dartling:
-    git: https://github.com/dzenanr/dartling.git
+    git: 'https://github.com/dzenanr/dartling.git'
   intl: any
