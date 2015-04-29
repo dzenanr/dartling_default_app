@@ -2,11 +2,11 @@
 
 based on [Semantic Versioning](http://semver.org/)
 
-*1.0.6* 2015-04-24
+*2.0.1* 2015-04-24
 
 + update import in the test folder to use the new test package
 
-*1.0.5* 2014-03-19
+*2.0.0* 2014-03-19
 
 + comment print in entities
 + update concept.identifier to concept.hasId

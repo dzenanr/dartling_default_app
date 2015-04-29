@@ -25,13 +25,13 @@ class RepoMenuBar {
     section = '${section}<nav> \n';
     section = '${section}  <ul> \n';
     for (Domain domain in domains) {
-      DomainModels domainModels = repo.getDomainModels(domain.code);
+      //DomainModels domainModels = repo.getDomainModels(domain.code);
       for (Model model in domain.models) {
         section = '${section}    <li>${domain.code}.${model.code} \n';
         section = '${section}      <ul> \n';
-        ModelEntries modelEntries = domainModels.getModelEntries(model.code);
+        //ModelEntries modelEntries = domainModels.getModelEntries(model.code);
         for (Concept concept in model.entryConcepts) {
-          Entities entryEntities = modelEntries.getEntry(concept.code);
+          //Entities entryEntities = modelEntries.getEntry(concept.code);
           section = '${section}        <li><button id="${domain.code}'
                     '${model.code}${concept.code}Button">Show ${concept.codes}'
                     '</button></li> \n';

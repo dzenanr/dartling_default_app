@@ -315,7 +315,7 @@ testDefaultProject(Repo repo, String domainCode, String modelCode) {
       projects.add(marketing);
       expect(projects.length, equals(++projectCount));
 
-      var beforeDescriptionUpdate = marketing.description;
+      //var beforeDescriptionUpdate = marketing.description;
       var afterUpdateMarketing = marketing.copy();
       var newDescription = 'Writing papers about dartling';
       afterUpdateMarketing.description = newDescription;
