@@ -36,7 +36,7 @@ class ProjectEntries extends ModelEntries {
     return null;
   }
 
-  fromJsonToData() {
+  void fromJsonToData() {
     fromJsonToEntry(defaultProjectDataJson);
   }
 

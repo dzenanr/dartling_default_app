@@ -37,7 +37,7 @@ import 'package:dartling_default_app/dartling_default_app.dart';
 
 import 'package:dartling_default_app/default_project.dart';
 
-initDefaultData(DefaultRepo defaultRepo) {
+void initDefaultData(DefaultRepo defaultRepo) {
    var defaultModels =
        defaultRepo.getDomainModels(DefaultRepo.defaultDomainCode);
 
@@ -47,7 +47,7 @@ initDefaultData(DefaultRepo defaultRepo) {
    //defaultProjectEntries.display();
 }
 
-showDefaultData(DefaultRepo defaultRepo) {
+void showDefaultData(DefaultRepo defaultRepo) {
   var mainView = new View(document, "main");
   mainView.repo = defaultRepo;
   new RepoMainSection(mainView);

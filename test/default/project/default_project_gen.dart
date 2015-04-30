@@ -35,7 +35,7 @@ import 'package:dartling/dartling.dart';
 
 import 'package:dartling_default_app/default_project.dart';
 
-genCode() {
+void genCode() {
   var repo = new Repo();
 
   // change "Dartling" to "YourDomainName"
@@ -51,7 +51,7 @@ genCode() {
   repo.gen('default_project');
 }
 
-initDefaultData(DefaultRepo defaultRepo) {
+void initDefaultData(DefaultRepo defaultRepo) {
    var defaultModels =
        defaultRepo.getDomainModels(DefaultRepo.defaultDomainCode);
 

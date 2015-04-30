@@ -11,7 +11,7 @@ class DefaultRepo extends Repo {
     _initDefaultDomain();
   }
 
-  _initDefaultDomain() {
+  void _initDefaultDomain() {
     var defaultDomain = new Domain(defaultDomainCode);
     domains.add(defaultDomain);
     add(new DefaultModels(defaultDomain));

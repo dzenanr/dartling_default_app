@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 
 import 'package:dartling_default_app/default_project.dart';
 
-testDefaultProject(Repo repo, String domainCode, String modelCode) {
+void testDefaultProject(Repo repo, String domainCode, String modelCode) {
   DefaultModels models;
   ProjectEntries entries;
   group("Testing ${domainCode}.${modelCode}", () {
@@ -568,7 +568,7 @@ class ProjectReaction implements ActionReactionApi {
   bool reactedOnAdd = false;
   bool reactedOnUpdate = false;
 
-  react(BasicAction action) {
+  void react(BasicAction action) {
     if (action is EntitiesAction) {
       reactedOnAdd = true;
     } else if (action is EntityAction) {
@@ -578,7 +578,7 @@ class ProjectReaction implements ActionReactionApi {
 
 }
 
-testDefaultData(DefaultRepo defaultRepo) {
+void testDefaultData(DefaultRepo defaultRepo) {
   testDefaultProject(defaultRepo, DefaultRepo.defaultDomainCode,
       DefaultRepo.defaultProjectModelCode);
 }
