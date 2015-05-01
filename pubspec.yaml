@@ -5,8 +5,8 @@ description: dartling default app is used to interpret a dartling model and prov
 homepage: https://github.com/dzenanr/dartling_default_app
 documentation: http://goo.gl/Fd08zZ
 environment:
-  sdk: ^1.10.0
+  sdk: '>=1.10.0 <2.0.0'
 dependencies:
-  browser: any
-  dartling: any
-  intl: any
+  browser: ^0.10.0+2 
+  dartling: ^2.0.2
+  intl: ^0.12.2+1 

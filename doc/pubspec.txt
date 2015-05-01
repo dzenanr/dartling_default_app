@@ -1,4 +1,4 @@
-pubspec
+pubspec.yaml
 
 https://www.dartlang.org/tools/pub/
 https://www.dartlang.org/tools/pub/dependencies.html
@@ -10,18 +10,22 @@ For example, ^1.2.3 is equivalent to '>=1.2.3 <2.0.0', and ^0.1.2 is equivalent 
 pubspec.yaml
 
 name: dartling_default_app
-version: 1.0.6
-description: dartling default app is used to interpret a dartling model and provide a web app to navigate through the model starting by its entry points
+version: 2.0.2
 author: Dzenan Ridjanovic <dzenanr@gmail.com>
+description: dartling default app is used to interpret a dartling model and provide a web app to navigate through the model starting by its entry points
 homepage: https://github.com/dzenanr/dartling_default_app
 documentation: http://goo.gl/Fd08zZ
 environment:
-  sdk: '>=1.9.3 <2.0.0'
+  sdk: '>=1.10.0 <2.0.0'
 dependencies:
-  browser: '>=0.10.0 <0.11.0'
+  browser: ^0.10.0+2 
+  dartling: ^2.0.2
+  intl: ^0.12.2+1 
+
+
+dependencies:
   dartling: 
     git: git://github.com/dzenanr/dartling.git
-  intl: '>=0.12.2 <1.0.0'
   
 ?
   dartling:
@@ -39,9 +43,11 @@ dependencies:
   intl: any
 
 dependencies:
-  browser: '>=0.10.0 <0.11.0'
   dartling:
     path: 'C:\Users\ridjanod.FSA-RIDJANOD-2\dart\model\dartling'
-  intl: '>=0.12.2 <1.0.0'
   
-  
+dependencies:
+  dartling:
+    path: /home/dzenanr/dart/model/dartling  
+
+    
